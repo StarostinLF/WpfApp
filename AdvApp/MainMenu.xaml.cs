@@ -26,7 +26,7 @@ namespace AdvApp
 
             UserLabel.Content = "Пользователь: " + userName;
 
-            if (userName.ToLower() != "admin") usrBttn.IsEnabled = false;
+            if (userName.ToLower() != "Администратор") usrBttn.IsEnabled = false;
         }
 
         // Передачи
