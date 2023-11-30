@@ -8,31 +8,31 @@
   </User>
   <User>
     <UserId>1</UserId>
-    <Name>Пользователь</Name>
+    <Name>Пользователь 1</Name>
     <Login>user1</Login>
     <Password>pass1</Password>
   </User>
   <User>
     <UserId>2</UserId>
-    <Name>Пользователь2</Name>
+    <Name>Пользователь 2</Name>
     <Login>user2</Login>
     <Password>pass2</Password>
   </User>
   <User>
     <UserId>3</UserId>
-    <Name>Пользователь3</Name>
+    <Name>Пользователь 3</Name>
     <Login>user3</Login>
     <Password>pass3</Password>
   </User>
   <User>
     <UserId>4</UserId>
-    <Name>Пользователь4</Name>
+    <Name>Пользователь 4</Name>
     <Login>user4</Login>
     <Password>pass4</Password>
   </User>
   <User>
     <UserId>5</UserId>
-    <Name>Пользователь5</Name>
+    <Name>Пользователь 5</Name>
     <Login>user5</Login>
     <Password>pass5</Password>
   </User>

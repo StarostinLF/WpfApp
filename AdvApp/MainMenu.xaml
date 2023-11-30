@@ -28,6 +28,6 @@
         <Button Content="Реклама" HorizontalAlignment="Center" Margin="0,144,0,0" Style="{StaticResource ButtonStyle}" Click="AdvertisementsForm_Button" Height="67" VerticalAlignment="Top" />
         <Button Content="Заказчики" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,224,0,0" Style="{StaticResource ButtonStyle}" Click="CustomersForm_Button" />
         <Button Content="Агенты" HorizontalAlignment="Center" Margin="0,312,0,0" Style="{StaticResource ButtonStyle}" Click="Agents_Button" Height="67" VerticalAlignment="Top" />
-        <Button Content="Пользователи" Name="usrBttn" HorizontalAlignment="Center" Margin="0,398,0,0" Style="{StaticResource ButtonStyle}" Click="Users_Button" Height="67" VerticalAlignment="Top" />
+        <Button Content="Пользователи" Name="addUserButton" HorizontalAlignment="Center" Margin="0,398,0,0" Style="{StaticResource ButtonStyle}" Click="Users_Button" Height="67" VerticalAlignment="Top" />
     </Grid>
 </Window>
