@@ -74,6 +74,7 @@ namespace AdvApp
             form.ShowDialog();
         }
 
+        // Возврат к авторизации
         private void MainMenu_Closed(object sender, EventArgs e)
         {
             mainWindow.Show();
