@@ -4,7 +4,5 @@ using System.Windows;
 
 namespace AdvApp
 {
-    public partial class App : Application
-    {
-    }
+    public partial class App : Application { }
 }
