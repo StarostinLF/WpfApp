@@ -24,6 +24,7 @@ namespace AdvApp.User_forms
         public EditUserForm(User userToEdit)
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             UpdatedUser = userToEdit;
             UserIdTextBox.Text = userToEdit.UserId.ToString();

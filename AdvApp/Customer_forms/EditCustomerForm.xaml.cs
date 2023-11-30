@@ -24,6 +24,7 @@ namespace AdvApp.Customer_forms
         public EditCustomerForm(Customer customerToEdit)
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             UpdatedCustomer = customerToEdit;
             CustomerIdTextBox.Text = customerToEdit.CustomerId.ToString();

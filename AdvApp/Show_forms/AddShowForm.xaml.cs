@@ -23,6 +23,7 @@ namespace AdvApp.Show_forms
         public AddShowForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             NewShow = new Show();
         }

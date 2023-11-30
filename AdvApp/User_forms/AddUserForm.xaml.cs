@@ -23,7 +23,8 @@ namespace AdvApp.User_forms
         public AddUserForm()
         {
             InitializeComponent();
-            
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
             NewUser = new User();
         }
 

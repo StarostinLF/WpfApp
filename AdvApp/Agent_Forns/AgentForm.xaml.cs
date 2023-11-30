@@ -23,6 +23,7 @@ namespace AdvApp
         public AgentForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             entyties = XmlDataManager.LoadData<Agent>("data/Agents.xml");
             dataGrid.ItemsSource = entyties;

@@ -24,6 +24,7 @@ namespace AdvApp
         public AdvertisementForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             advertisements = XmlDataManager.LoadData<Advertisement>("data/Advertisement.xml");
             AdvertisementsDataGrid.ItemsSource = advertisements;

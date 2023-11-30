@@ -23,6 +23,7 @@ namespace AdvApp.Show_forms
         public ShowForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             entities = XmlDataManager.LoadData<Show>("data/Shows.xml");
             dataGrid.ItemsSource = entities;

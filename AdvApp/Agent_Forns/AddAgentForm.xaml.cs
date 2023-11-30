@@ -23,6 +23,8 @@ namespace AdvApp
         public AddAgentForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
             NewAgent = new Agent();
         }
 

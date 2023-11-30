@@ -23,6 +23,7 @@ namespace AdvApp.Customer_forms
         public CustomerForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             entities = XmlDataManager.LoadData<Customer>("data/Customers.xml");
             dataGrid.ItemsSource = entities;

@@ -24,6 +24,7 @@ namespace AdvApp
         public EditAdvertisementForm(Advertisement advertisementToEdit)
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             UpdatedAdvertisement = advertisementToEdit;
             AdIdTextBox.Text = advertisementToEdit.AdId.ToString();

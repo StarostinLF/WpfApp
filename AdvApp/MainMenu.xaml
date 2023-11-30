@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Window x:Class="AdvApp.MainMenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Главное меню" Height="550" Width="450" ResizeMode="NoResize">
+<Window x:Class="AdvApp.MainMenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Главное меню" Height="550" Width="450" ResizeMode="NoResize" Closed="MainMenu_Closed">
     <FrameworkElement.Resources>
         <ResourceDictionary>
             <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">

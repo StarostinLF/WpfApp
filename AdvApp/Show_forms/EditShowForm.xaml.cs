@@ -24,6 +24,7 @@ namespace AdvApp.Show_forms
         public EditShowForm(Show showToEdit)
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             UpdatedShow = showToEdit;
             ShowIdTextBox.Text = showToEdit.ShowId.ToString();

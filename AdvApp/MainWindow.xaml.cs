@@ -14,7 +14,11 @@ namespace AdvApp
 {
     public partial class MainWindow : Window
     {
-        public MainWindow() { InitializeComponent(); }
+        public MainWindow()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
 
         // Список пользователей
         private List<User> Users { get; set; }
@@ -27,10 +31,10 @@ namespace AdvApp
 
             if (user != null)
             {
-                MainMenu menu = new MainMenu(user.Name);
+                MainMenu menu = new MainMenu(user.Name, this);
 
                 menu.Show();
-                Close();
+                Hide();
             }
         }
     }

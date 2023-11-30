@@ -23,6 +23,7 @@ namespace AdvApp
         public EditAgentForm(Agent agentToEdit)
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             UpdatedAgent = agentToEdit;
             AgentIdTextBox.Text = agentToEdit.AgentId.ToString();

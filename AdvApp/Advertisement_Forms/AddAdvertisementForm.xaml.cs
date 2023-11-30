@@ -20,7 +20,11 @@ namespace AdvApp
         // Список реклам (получение переменных)
         public Advertisement NewAdvertisement { get; private set; }
 
-        public AddAdvertisementForm() { InitializeComponent(); }
+        public AddAdvertisementForm()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
 
         // Добавление данных в Advertisement
         private void AddButton_Click(object sender, RoutedEventArgs e)

@@ -20,9 +20,14 @@ namespace AdvApp
 {
     public partial class MainMenu : Window
     {
-        public MainMenu(string userName)
+        private MainWindow mainWindow;
+
+        public MainMenu(string userName, MainWindow mainWindow)
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            this.mainWindow = mainWindow;
 
             UserLabel.Content = "Пользователь: " + userName;
 
@@ -67,6 +72,11 @@ namespace AdvApp
             UserForm form = new UserForm();
 
             form.ShowDialog();
+        }
+
+        private void MainMenu_Closed(object sender, EventArgs e)
+        {
+            mainWindow.Show();
         }
     }
 }

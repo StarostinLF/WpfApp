@@ -23,6 +23,7 @@ namespace AdvApp.User_forms
         public UserForm()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             entities = XmlDataManager.LoadData<User>("data/Users.xml");
             dataGrid.ItemsSource = entities;
