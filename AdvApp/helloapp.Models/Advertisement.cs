@@ -1,5 +1,3 @@
-using System;
-
 public class Advertisement
 {
 	public int AdId { get; set; }

@@ -25,7 +25,7 @@
         </ResourceDictionary>
     </FrameworkElement.Resources>
 
-    <StackPanel Margin="10">
+    <StackPanel Width="360" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Label Content="ID клиента" Style="{StaticResource LabelStyle}" />
         <TextBox Name="CustomerIdTextBox" Style="{StaticResource TextBoxStyle}" />
         <Label Content="Имя" Style="{StaticResource LabelStyle}" />

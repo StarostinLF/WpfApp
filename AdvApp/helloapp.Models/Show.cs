@@ -1,4 +1,3 @@
-
 public class Show
 {
 	public int ShowId { get; set; }

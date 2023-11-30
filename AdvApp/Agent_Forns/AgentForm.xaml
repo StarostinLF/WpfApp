@@ -10,18 +10,21 @@
                     <Setter Property="FontSize" Value="14" />
                     <Setter Property="Margin" Value="5" />
                 </Style>
+
                 <Style x:Key="TextStyle" TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="#000000" />
                     <Setter Property="FontSize" Value="14" />
                 </Style>
             </ResourceDictionary>
         </FrameworkElement.Resources>
+
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="#B5D5CA" Height="43">
             <Button Name="AddButton" Content="Добавить" Style="{StaticResource ButtonStyle}" Click="AddButton_Click" />
             <Button Name="DeleteButton" Content="Удалить" Style="{StaticResource ButtonStyle}" Click="DeleteButton_Click" />
             <Button Name="EditButton" Content="Изменить" Style="{StaticResource ButtonStyle}" Click="EditButton_Click" />
             <TextBox Name="SearchTextBox" Width="200" Margin="5" TextChanged="SearchTextBox_TextChanged" />
         </StackPanel>
+
         <DataGrid Name="dataGrid" AutoGenerateColumns="False" Margin="0,40,0,0" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID агента" ElementStyle="{StaticResource TextStyle}" Binding="{Binding Path=AgentId}" />

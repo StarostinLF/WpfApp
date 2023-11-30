@@ -1,4 +1,3 @@
-
 public class Agent
 {
 	public int AgentId { get; set; }

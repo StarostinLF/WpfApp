@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Window x:Class="AdvApp.EditAgentForm" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Изменить агента" Height="367" Width="400" ResizeMode="NoResize">
+<Window x:Class="AdvApp.EditAgentForm" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Изменить агента" Height="450" Width="400" ResizeMode="NoResize">
     <FrameworkElement.Resources>
         <ResourceDictionary>
             <Style x:Key="LabelStyle" TargetType="{x:Type Label}">
@@ -26,7 +26,7 @@
         </ResourceDictionary>
     </FrameworkElement.Resources>
 
-    <StackPanel Margin="10">
+    <StackPanel Width="360" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Label Content="ID агента" Style="{StaticResource LabelStyle}" />
         <TextBox Name="AgentIdTextBox" Style="{StaticResource TextBoxStyle}" />
         <Label Content="Имя" Style="{StaticResource LabelStyle}" />
