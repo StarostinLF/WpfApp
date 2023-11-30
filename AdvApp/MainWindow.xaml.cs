@@ -23,7 +23,7 @@ namespace AdvApp
         // Список пользователей
         private List<User> Users { get; set; }
 
-        // Войти в систему
+        // Вход в систему
         private void Auth_Button(object sender, RoutedEventArgs e)
         {
             Users = XmlDataManager.LoadData<User>("data/Users.xml");
