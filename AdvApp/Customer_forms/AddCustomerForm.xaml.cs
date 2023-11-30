@@ -23,6 +23,7 @@ namespace AdvApp.Customer_forms
         public AddCustomerForm()
         {
             InitializeComponent();
+
             NewCustomer = new Customer();
         }
 
