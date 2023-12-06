@@ -19,7 +19,7 @@ namespace AdvApp
 
             UserLabel.Content = "Пользователь: " + userName;
 
-            if (userName.ToLower() != "администратор") addUserButton.IsEnabled = false;
+            if (userName.ToLower() != "администратор") addUserButton.Visibility = Visibility.Collapsed;
         }
 
         // Передачи
