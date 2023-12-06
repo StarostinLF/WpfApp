@@ -36,4 +36,22 @@
     <Login>user5</Login>
     <Password>pass5</Password>
   </User>
+  <User>
+    <UserId>6</UserId>
+    <Name>Пользователь 6</Name>
+    <Login>user6</Login>
+    <Password>pass6</Password>
+  </User>
+  <User>
+    <UserId>7</UserId>
+    <Name>Пользователь 7</Name>
+    <Login>user7</Login>
+    <Password>pass7</Password>
+  </User>
+  <User>
+    <UserId>8</UserId>
+    <Name>Пользователь 8</Name>
+    <Login>user8</Login>
+    <Password>pass8</Password>
+  </User>
 </ArrayOfUser>
