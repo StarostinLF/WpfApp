@@ -19,14 +19,15 @@ namespace AdvApp.User_forms
         // Добавление данных в User
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            int userId;
+            var users = XmlDataManager.LoadData<User>("data/Users.xml");
 
-            bool isUserIdValid = int.TryParse(UserIdTextBox.Text, out userId);
+            int userId = users.Max(u => u.UserId) + 1;
+
             bool isNameValid = !string.IsNullOrWhiteSpace(NameTextBox.Text);
             bool isLoginValid = !string.IsNullOrWhiteSpace(LoginTextBox.Text);
             bool isPasswordValid = !string.IsNullOrWhiteSpace(PasswordBox.Text);
 
-            if (isUserIdValid && isNameValid && isLoginValid && isPasswordValid)
+            if (isNameValid && isLoginValid && isPasswordValid)
             {
                 NewUser = new User
                 {
@@ -38,9 +39,11 @@ namespace AdvApp.User_forms
 
                 base.DialogResult = true;
 
+                MessageBox.Show("Регистрация прошла успешно! Попробуйте войти в систему.", "Завершение", MessageBoxButton.OK, MessageBoxImage.Information);
+
                 Close();
             }
-            else MessageBox.Show("Пожалуйста, проверьте введенные данные и попробуйте снова.", "Некорректные данные", MessageBoxButton.OK, MessageBoxImage.Hand);
+            else MessageBox.Show("Пожалуйста, проверьте введенные данные и попробуйте снова.", "Некорректные данные", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

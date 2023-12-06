@@ -1,14 +1,21 @@
-﻿using System.Windows;
+﻿using AdvApp.User_forms;
+using System.Windows;
+using System.Windows.Controls;
 
 /* Начальное окно */
 namespace AdvApp
 {
     public partial class MainWindow : Window
     {
+        // Список пользователей
+        private List<User> entities;
+
         public MainWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            entities = XmlDataManager.LoadData<User>("data/Users.xml");
         }
 
         // Список пользователей
@@ -26,6 +33,22 @@ namespace AdvApp
 
                 menu.Show();
                 Hide();
+            }
+        }
+
+        // Вход в систему
+        private void Reg_Button(object sender, RoutedEventArgs e)
+        {
+            AddUserForm addUserForm = new AddUserForm();
+            if (addUserForm.ShowDialog() == true)
+            {
+                User newUser = addUserForm.NewUser;
+
+                if (newUser != null)
+                {
+                    entities.Add(newUser);
+                    XmlDataManager.SaveData("data/Users.xml", entities);
+                }
             }
         }
     }
