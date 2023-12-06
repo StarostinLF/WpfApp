@@ -54,4 +54,10 @@
     <Login>user8</Login>
     <Password>pass8</Password>
   </User>
+  <User>
+    <UserId>9</UserId>
+    <Name>Пользователь 9</Name>
+    <Login>user9</Login>
+    <Password>pass9</Password>
+  </User>
 </ArrayOfUser>
