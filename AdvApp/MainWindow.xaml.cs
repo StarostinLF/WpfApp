@@ -40,6 +40,7 @@ namespace AdvApp
         private void Reg_Button(object sender, RoutedEventArgs e)
         {
             AddUserForm addUserForm = new AddUserForm();
+
             if (addUserForm.ShowDialog() == true)
             {
                 User newUser = addUserForm.NewUser;
