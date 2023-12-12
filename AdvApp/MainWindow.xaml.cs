@@ -41,7 +41,7 @@ namespace AdvApp
         {
             AddUserForm addUserForm = new AddUserForm();
 
-            // Вывод окна регистрации, не закрывая регистрацию, и проверка на закрытия окна регистрации
+            // Вывод окна регистрации, не закрывая регистрацию, и проверка на закрытие окна регистрации
             if (addUserForm.ShowDialog() == true)
             {
                 User newUser = addUserForm.NewUser;
