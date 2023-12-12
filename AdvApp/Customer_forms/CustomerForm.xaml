@@ -22,11 +22,10 @@
             <Button Name="AddButton" Content="Добавить" Style="{StaticResource ButtonStyle}" Click="AddButton_Click" />
             <Button Name="DeleteButton" Content="Удалить" Style="{StaticResource ButtonStyle}" Click="DeleteButton_Click" />
             <Button Name="EditButton" Content="Изменить" Style="{StaticResource ButtonStyle}" Click="EditButton_Click" />
-            <TextBox Name="SearchTextBox" Width="200" Margin="5" />
-            <Button Name="SearchButton" Content="Поиск" Style="{StaticResource ButtonStyle}" Click="SearchButton_Click" Width="60" />
+            <TextBox Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged"  Width="200" Margin="5" />
         </StackPanel>
 
-        <DataGrid Name="dataGrid" AutoGenerateColumns="False" Margin="0,40,0,0" VerticalAlignment="Top" SelectionChanged="dataGrid_SelectionChanged">
+        <DataGrid Name="dataGrid" AutoGenerateColumns="False" Margin="0,40,0,0" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID клиента" ElementStyle="{StaticResource TextStyle}" Binding="{Binding Path=CustomerId}" />
                 <DataGridTextColumn Header="Имя" ElementStyle="{StaticResource TextStyle}" Binding="{Binding Path=Name}" />

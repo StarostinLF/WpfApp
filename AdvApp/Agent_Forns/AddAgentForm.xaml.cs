@@ -38,9 +38,8 @@ namespace AdvApp
                     CommissionPercentage = commissionPercentage,
                     TotalSalesAmount = totalSalesAmount
                 };
-                base.DialogResult = true;
 
-                Close();
+                base.DialogResult = true;
             }
             else MessageBox.Show("Пожалуйста, проверьте введенные данные и попробуйте снова.", "Некорректные данные", MessageBoxButton.OK, MessageBoxImage.Hand);
         }

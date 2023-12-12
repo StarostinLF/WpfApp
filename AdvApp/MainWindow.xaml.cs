@@ -25,12 +25,12 @@ namespace AdvApp
         private void Auth_Button(object sender, RoutedEventArgs e)
         {
             Users = XmlDataManager.LoadData<User>("data/Users.xml");
-            User user = Users.FirstOrDefault((User u) => u.Login == loginBox.Text && u.Password == passwordBox.Text);
+            User user = Users.FirstOrDefault(u => u.Login == loginBox.Text && u.Password == passwordBox.Text);
 
             if (user != null)
             {
                 MainMenu menu = new MainMenu(user.Name, this);
-
+                                
                 menu.Show();
                 Hide();
             }
@@ -41,6 +41,7 @@ namespace AdvApp
         {
             AddUserForm addUserForm = new AddUserForm();
 
+            // Вывод окна регистрации, не закрывая регистрацию, и проверка на закрытия окна регистрации
             if (addUserForm.ShowDialog() == true)
             {
                 User newUser = addUserForm.NewUser;

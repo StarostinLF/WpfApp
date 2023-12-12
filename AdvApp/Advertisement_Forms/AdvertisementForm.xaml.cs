@@ -28,9 +28,9 @@ namespace AdvApp
                 Advertisement newAd = addForm.NewAdvertisement;
 
                 advertisements.Add(newAd);
-                AdvertisementsDataGrid.Items.Refresh();
-
+                
                 XmlDataManager.SaveData("data/Advertisement.xml", advertisements);
+                AdvertisementsDataGrid.Items.Refresh();
             }
         }
 
@@ -64,9 +64,9 @@ namespace AdvApp
                     int index = advertisements.IndexOf(selectedAd);
 
                     advertisements[index] = editForm.UpdatedAdvertisement;
-                    AdvertisementsDataGrid.Items.Refresh();
 
                     XmlDataManager.SaveData("data/Advertisement.xml", advertisements);
+                    AdvertisementsDataGrid.Items.Refresh();
                 }
             }
         }

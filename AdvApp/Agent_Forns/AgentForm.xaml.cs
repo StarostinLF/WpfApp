@@ -7,15 +7,15 @@ namespace AdvApp
     public partial class AgentForm : Window
     {
         // Список агентов
-        private List<Agent> entyties;
+        private List<Agent> entities;
 
         public AgentForm()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            entyties = XmlDataManager.LoadData<Agent>("data/Agents.xml");
-            dataGrid.ItemsSource = entyties;
+            entities = XmlDataManager.LoadData<Agent>("data/Agents.xml");
+            dataGrid.ItemsSource = entities;
         }
 
         // Открыть окно с добавлением и отправить данные в таблицу
@@ -29,8 +29,8 @@ namespace AdvApp
 
                 if (newAgent != null)
                 {
-                    entyties.Add(newAgent);
-                    XmlDataManager.SaveData("data/Advertisement.xml", entyties);
+                    entities.Add(newAgent);
+                    XmlDataManager.SaveData("data/Agents.xml", entities);
                     dataGrid.Items.Refresh();
                 }
             }
@@ -45,10 +45,9 @@ namespace AdvApp
 
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
-                    entyties.Remove(selectedAd);
-                    dataGrid.ItemsSource = null;
-                    XmlDataManager.SaveData("data/Advertisement.xml", entyties);
-                    dataGrid.ItemsSource = entyties;
+                    entities.Remove(selectedAd);
+                    XmlDataManager.SaveData("data/Agents.xml", entities);
+                    dataGrid.Items.Refresh();
                 }
             }
             else MessageBox.Show("Пожалуйста, выберите объявление для удаления.", "Объявление не выбрано", MessageBoxButton.OK, MessageBoxImage.Hand);
@@ -63,11 +62,11 @@ namespace AdvApp
 
                 if (editForm.ShowDialog() == true)
                 {
-                    int index = entyties.IndexOf(selected);
-                    entyties[index] = editForm.UpdatedAgent;
-
+                    int index = entities.IndexOf(selected);
+                    entities[index] = editForm.UpdatedAgent;
+                                        
+                    XmlDataManager.SaveData("data/Agents.xml", entities);
                     dataGrid.Items.Refresh();
-                    XmlDataManager.SaveData("data/Advertisement.xml", entyties);
                 }
             }
         }
@@ -77,7 +76,7 @@ namespace AdvApp
         {
             string searchText = SearchTextBox.Text.ToLower();
 
-            List<Agent> filteredList = entyties.Where((Agent agent) =>
+            List<Agent> filteredList = entities.Where(agent =>
             agent.Name.ToLower().Contains(searchText) ||
             agent.AgentId.ToString().Contains(searchText) ||
             agent.CommissionPercentage.ToString().Contains(searchText) ||

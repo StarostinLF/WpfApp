@@ -36,8 +36,6 @@ namespace AdvApp.Customer_forms
                 UpdatedCustomer.ContactPerson = ContactPersonTextBox.Text;
 
                 base.DialogResult = true;
-
-                Close();
             }
             else MessageBox.Show("Пожалуйста, проверьте введенные данные.", "Ошибка ввода", MessageBoxButton.OK, MessageBoxImage.Hand);
         }

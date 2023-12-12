@@ -45,6 +45,7 @@ namespace AdvApp.Show_forms
                 {
                     entities.Remove(selectedShow);
                     dataGrid.ItemsSource = null;
+
                     XmlDataManager.SaveData("data/Shows.xml", entities);
                     dataGrid.ItemsSource = entities;
                 }
@@ -64,14 +65,15 @@ namespace AdvApp.Show_forms
                     int index = entities.IndexOf(selected);
 
                     entities[index] = editForm.UpdatedShow;
-                    dataGrid.Items.Refresh();
+                    
                     XmlDataManager.SaveData("data/Shows.xml", entities);
+                    dataGrid.Items.Refresh();
                 }
             }
         }
 
         // Поиск в таблице по введенному значению
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private void SearchTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             string searchText = SearchTextBox.Text.ToLower();
 

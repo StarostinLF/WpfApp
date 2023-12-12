@@ -39,8 +39,6 @@ namespace AdvApp.Customer_forms
                 };
 
                 base.DialogResult = true;
-
-                Close();
             }
             else MessageBox.Show("Пожалуйста, проверьте введенные данные и попробуйте снова.", "Некорректные данные", MessageBoxButton.OK, MessageBoxImage.Hand);
         }

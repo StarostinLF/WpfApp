@@ -40,8 +40,6 @@ namespace AdvApp.User_forms
                 base.DialogResult = true;
 
                 MessageBox.Show("Регистрация прошла успешно! Попробуйте войти в систему.", "Завершение", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                Close();
             }
             else MessageBox.Show("Пожалуйста, проверьте введенные данные и попробуйте снова.", "Некорректные данные", MessageBoxButton.OK, MessageBoxImage.Error);
         }

@@ -12,8 +12,7 @@ namespace AdvApp
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
-            UpdatedAgent = agentToEdit;
+                        
             AgentIdTextBox.Text = agentToEdit.AgentId.ToString();
             NameTextBox.Text = agentToEdit.Name;
             CommissionPercentageTextBox.Text = agentToEdit.CommissionPercentage.ToString();

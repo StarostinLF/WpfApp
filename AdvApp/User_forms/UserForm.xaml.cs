@@ -68,7 +68,7 @@ namespace AdvApp.User_forms
         }
 
         // Поиск в таблице по введенному значению
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private void SearchTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             string searchText = SearchTextBox.Text.ToLower();
 

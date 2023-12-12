@@ -73,7 +73,7 @@ namespace AdvApp.Customer_forms
         }
 
         // Поиск в таблице по введенному значению
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchText = SearchTextBox.Text.ToLower();
 
@@ -86,7 +86,5 @@ namespace AdvApp.Customer_forms
 
             dataGrid.ItemsSource = filteredList;
         }
-
-        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
     }
 }
